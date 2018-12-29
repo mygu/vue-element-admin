@@ -3,7 +3,7 @@ import Cookies from 'js-cookie'
 const app = {
   state: {
     sidebar: {
-      opened: Cookies.get('sidebarStatus') ? !!+Cookies.get('sidebarStatus') : true,
+      opened: Cookies.get('sidebarStatus') === 0 || 1 ? !!+Cookies.get('sidebarStatus') : true,
       withoutAnimation: false
     },
     device: 'desktop',
